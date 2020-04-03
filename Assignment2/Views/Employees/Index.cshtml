@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Assignment2.Models.Employee>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+@*@ViewBag.Title
+@ViewData["title"]*@
+
+
+
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>sal</td>
+    </tr>
+    @foreach (var x in ViewBag.data1)
+    {
+    <tr>
+        <td>@x.Id</td>
+        <td>@x.name</td>
+        <td>@x.sal</td>
+    </tr>
+    }
+</table>
+
+@*<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sal)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sal)
+            </td>
+           
+        </tr>
+}
+    </tbody>
+</table>*@
